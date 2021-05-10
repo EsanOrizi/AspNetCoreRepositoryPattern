@@ -15,5 +15,6 @@ namespace MyMDB.Data
         }
 
         public DbSet<MyMDB.Models.Movie> Movie { get; set; }
+        public DbSet<MyMDB.Models.Star> Star { get; set; }
     }
 }

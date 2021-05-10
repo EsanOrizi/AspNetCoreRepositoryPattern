@@ -34,7 +34,11 @@ namespace MyMDB
                     options.UseSqlServer(Configuration.GetConnectionString("MyMDBContext")));
 
             services.AddScoped<EfCoreMovieRepository>();
+
+            services.AddScoped<EfCoreStarRepository>();
+
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
