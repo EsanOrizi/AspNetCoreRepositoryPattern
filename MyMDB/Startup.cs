@@ -12,6 +12,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using MyMDB.Data;
+using MyMDB.Data.EFCore;
 
 namespace MyMDB
 {
@@ -31,6 +32,8 @@ namespace MyMDB
 
             services.AddDbContext<MyMDBContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("MyMDBContext")));
+
+            services.AddScoped<EfCoreMovieRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
